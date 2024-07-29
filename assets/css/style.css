@@ -461,7 +461,7 @@ footer h1{
 }
 @media (max-width:500px){
   body{
-    background-image: url(/Images/spidermansiting.jpeg);
+    background-image: url(/assets/Images/spidermansiting.jpeg);
     background-repeat: no-repeat;
   }
   .cont{
