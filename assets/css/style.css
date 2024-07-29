@@ -338,6 +338,7 @@ h2{
 }
 /* -----work end----- */
 /* ------Projects------- */
+
 @keyframes appearOpacity{
   from{
     opacity: 0;
@@ -346,7 +347,14 @@ h2{
     opacity: 1;
   }
 }
+.project-list{
+  margin: auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
 #project{
+
   animation: appearOpacity linear;
   animation-timeline: view();
   animation-range: entry 20% cover 60%;
@@ -354,7 +362,6 @@ h2{
 .project-container h1{
   padding-top: 80px;
   padding-bottom: 20px;
-  display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
@@ -362,8 +369,8 @@ h2{
 
 }
 .project1 img{
-  width: 150px;
-  height: min-content;
+  width: 140px;
+  height: 170px;
   border-radius: 20px;
 }
 .project1 h2{
@@ -372,6 +379,7 @@ h2{
   padding-bottom: 5px;
 }
 .project1 a{
+  display: inline-flex;
   color: white;
   padding-bottom: 5px;
 }
@@ -381,7 +389,7 @@ h2{
   width: 300px;
   background-color: rgba(255, 255, 255, 0.055);
   backdrop-filter: blur(1.5rem);
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
