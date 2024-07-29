@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <link rel="stylesheet" href="/assets/css/calcStyle.css">
+  </head>
+  <body class="body2">
+    <div class="calc">
+    <input class="display"onkeydown="enter(event);">
+    <p>
+      <button onclick="updateCalculation('7');">7</button>
+      <button onclick="updateCalculation('8');">8</button>
+      <button onclick="updateCalculation('9');">9</button>
+      <button onclick="updateCalculation(' * ');" class="op">*</button>
+      </p>
+
+
+      <p>
+        <button onclick="updateCalculation('4');">4</button>
+        <button onclick="updateCalculation('5');">5</button>
+        <button onclick="updateCalculation('6');">6</button>
+        <button onclick="updateCalculation(' - ');"class="op">-</button>
+      </p>
+
+      <p>
+        <button onclick="updateCalculation('1');">1</button>
+        <button onclick="updateCalculation('2');">2</button>
+        <button onclick="updateCalculation('3');">3</button>
+        <button onclick="updateCalculation(' + ');"class="op">+</button>
+      </p>
+      <p>
+        <button onclick="updateCalculation('0');">0</button>
+        <button onclick="updateCalculation('.');"class="op">.</button>
+        <button onclick="equalTo();"class="op">=</button>
+        <button onclick="updateCalculation(' / ');"class="op">/</button>
+      </p>
+      <p>
+        <button onclick="clearItem();" style="width:100px;"class="c">C</button>
+        <button onclick="backspace();" style="width:100px;"class="c"><svg clip-rule="evenodd" style="height: 30px;" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m22 6c0-.552-.448-1-1-1h-12.628c-.437 0-.853.191-1.138.523-1.078 1.256-3.811 4.439-4.993 5.815-.16.187-.241.419-.241.651 0 .231.08.463.24.651 1.181 1.38 3.915 4.575 4.994 5.835.285.333.701.525 1.14.525h12.626c.552 0 1-.448 1-1 0-2.577 0-9.423 0-12zm-13.628.5h12.128v11h-12.126l-4.715-5.51zm5.637 4.427 1.71-1.71c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.384-.219.531l-1.711 1.711 1.728 1.728c.147.147.22.339.22.53 0 .427-.349.751-.75.751-.192 0-.384-.073-.531-.219l-1.728-1.729-1.728 1.729c-.146.146-.339.219-.531.219-.401 0-.75-.324-.75-.751 0-.191.073-.383.22-.53l1.728-1.728-1.788-1.787c-.146-.148-.219-.339-.219-.532 0-.425.346-.749.751-.749.192 0 .384.073.53.219z" fill="#fff"/></svg></button>
+      </p>
+  </div>
+  <div class="mode"><button class="Dmode"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/></svg></button>
+
+  <button class="Lmode"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/></svg></button></div>
+  <div class="createdby"><h2>Created by Aravind</h2></div>
+  <div class="unl"></div>
+    <script src="/assets/js/calcScript.js"></script>
+  </body>
+</html>
