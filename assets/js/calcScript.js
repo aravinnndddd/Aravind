@@ -7,20 +7,6 @@ function updateCalculation(x) {
   return numberArray;
 }
 
-function ArrayL(){
-
-let arr = updateCalculation('');
-  arr = arr[0].toString().split('').map(char => parseInt(char));
-
-}
-
-function backspace(){
-    display.value = ArrayL();
-    console.log(backspace);
-
-   return backspace;
-}
-
 
 function equalTo(){
   try{
