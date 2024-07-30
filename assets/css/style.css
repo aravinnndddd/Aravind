@@ -213,18 +213,15 @@ h2{
   margin-left: auto;
 
 }
-.container input, button{
-  background-image:url(/assets/Images/spiderman.jpeg);
-  background-size:auto;
-  background-repeat: 
-  no-repeat;
-  color: aliceblue;
+input#name,button{
+  background-color: #252525;
+  color: rgb(255, 255, 255);
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;;
   margin: 20px auto;
-  border: 0px;
+  border: none;
   border-radius: 8px;
   height: 25px;
 }
@@ -579,5 +576,14 @@ footer h1{
       height: 200px;
       background-color: rgba(231, 133, 133, 0.671);
       backdrop-filter: blur(10px);
+    }
+    div.project-list{
+      display: flex;
+      flex-direction: column;
+      
+    }
+    .project1{
+      
+      text-align: center;
     }
 }
