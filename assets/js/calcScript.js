@@ -26,6 +26,10 @@ function clearItem(){
 
   display.value='';
 }
+function clear1Item (){
+  display.value = display.value.replace(display.value.charAt(display.value.length-1),'');
+}
+
 let darkmode = document.querySelector(".Dmode")
 darkmode.onclick=function(){
   document.querySelector(".body2").style.backgroundColor="rgb(35, 36, 36)";
