@@ -10,7 +10,7 @@
 /* the slider container */
 .slider{
   width: 100%;
-  height: 100vh;
+  height: 600px;
 }
 .slides{
   border-radius: 5%;
@@ -35,21 +35,19 @@
   padding-top:50px ;
   width:max-content;
   height: 400px;
-  animation: showingImg 4s  infinite linear ;
+  animation: showingImg 1s  ease-in-out ;
 }
+
 /* animation */
 @keyframes showingImg{
   0%{
     opacity: 0;
-    transform: translateX(-50%);
+
   }
-  50%{
-    opacity: 1;
-    transform: translateX(0%);
-  }
+
   100%{
-    opacity: 0;
-    transform: translateX(50%);
+    opacity: 1;
+
   }
 
 }
@@ -79,13 +77,17 @@ img.displaySlide{
   cursor: pointer;
 }
 .prev{
-  padding-left: 10px;
+
+  margin-top: 0px;
+  padding-left: 29px;
   left:30%;
 }
 .next{
+  margin-top: 0px;
+  padding-left: 29px;
   right: 30%;
 }
-#work{
+#Work{
   margin-top: 100px;
 }
 .heading{
@@ -104,7 +106,7 @@ img.displaySlide{
     height: 100%;;
   }
   .slides{
-    height: 500px;
+    height: 400px;
     width: 300px;
   }
   .slides img.ls{
@@ -117,16 +119,20 @@ img.displaySlide{
     padding-top:50px ;
     width:max-content;
     height: 300px;
-    animation: showingImg 4s  infinite ease-in-out ;
+   
   }
   .slider button{
     top: 530px;
   }
+
   .prev{
-    padding-left: 10px;
-    left:25%;
+    margin-top: 0px;
+    padding-left: 29px;
+    left:20%;
   }
   .next{
-    right: 25%;
+    margin-top: 0px;
+    padding-left: 29px;
+    right: 20%;
   }
 }
