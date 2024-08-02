@@ -27,11 +27,7 @@ function showSlide(index){
   slides[slideIndex].classList.add("displaySlide");
 }
 
-function slideNext(){
+document.querySelector(".slides").onclick = function slideNext(){
   slideIndex++;
   showSlide(slideIndex);
-}
-function slidePrev(){
- slideIndex--;
- showSlide(slideIndex);
 }
