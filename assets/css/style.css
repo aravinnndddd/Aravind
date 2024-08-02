@@ -586,4 +586,7 @@ footer h1{
       padding-top: 10px;
       text-align: center;
     }
+   .btn-for-mobile{
+      display: none;
+    }
 }
