@@ -355,7 +355,7 @@ div#Work.art-works.block3{
   align-items: center;
 }
 #project{
-
+  padding-top: 100px;
   animation: appearOpacity linear;
   animation-timeline: view();
   animation-range: entry 20% cover 60%;
