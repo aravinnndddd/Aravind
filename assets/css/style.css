@@ -1,3 +1,17 @@
+@font-face{ 
+  font-family: alba;
+  src:url(/assets/Font/alba/ALBA____.TTF);}
+  @font-face{
+  font-family: navfont;
+  src:url(/assets/Font/arista-pro/Arista-Pro/Arista-Pro-Alternate-Light-trial.ttf);}
+  @font-face {
+    font-family: Para;
+    src: url(/assets/Font/arista-pro/Arista-Pro/Arista-Pro-Alternate-Light-trial.ttf);
+  }
+  @font-face {
+    font-family: heading;
+    src: url(/assets/Font/arista-pro/Arista-Pro/Arista-Pro-Alternate-Bold-trial.ttf);
+  }
 
 *{
   margin: 0;
@@ -6,11 +20,11 @@
 body{
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0px 0px;
-    background-image: url(/assets/Images/spiderman.jpeg);
+    background-image: conic-gradient(from 10deg, blue,rgb(0, 204, 255),rgb(255, 0, 0),rgb(248, 69, 69),orange,blue);
     background-repeat:no-repeat;
     background-size:cover;
 
-    height: max-content;
+    height: 100%;
     overflow-y: scroll;
 } 
 html{
@@ -27,11 +41,6 @@ html{
     opacity: 1;
     transform: translateX(0%);
   }
-}
-.block{
-  animation: appear linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
 }
 @keyframes appearY{
   from{
@@ -51,15 +60,21 @@ html{
     opacity: 1;
   }
 }
-#Work{
-  height: 1000px;
-  animation: appearOpacity linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 50%;
-}
 
-.block2{
-  animation: appearY 1s linear;
+#Work{
+  animation: appearY ease-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+.project-container{
+  animation: appearY ease-out;
+  animation-timeline: view();
+  animation-range: entry 10% cover 30%;
+}
+#About{
+  animation: appearY ease-out;
+  animation-timeline: view();
+  animation-range: entry 5% cover 40%;
 }
 /* navigation */
 img.namedlogo{
@@ -67,16 +82,17 @@ img.namedlogo{
   height: 30px;
 }
 nav{
-  font-family:serif;
+  font-family: navfont;
   width: 80%;
   position: static;
   margin:10px auto;
   border-radius: 10px;
-  background-color: rgb(105, 102, 102);
-  height: 60px;
+  background-color: transparent;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition:0.5s ease-out;
 }
 .links-container{
   height: 100%;
@@ -95,11 +111,13 @@ nav a{
 
 }
 nav a:hover{
-  background-color: rgb(66, 67, 68);
-  border-radius: 10px;
-  transition:0.3s ease-in-out;
+  color: rgb(220, 69, 69);
+  font-size: 20px;
+  transition:0.5s ease-in;
 }
-
+nav a:not(:hover){
+  transition:0.5s ease-out;
+}
 nav .home-link{
   margin-right: auto;
 }
@@ -124,9 +142,9 @@ nav svg{
     top: 25%;
     right: -100%;
     z-index: 10;
-    width: 300px;
+    width: 200px;
     border-radius: 10px 0 0 10px;
-    background-color: #db8888f6;
+    background-color: #373f47f6;
     box-shadow: -5px 0 5px rgba(54, 54, 54, 0.25);
     transition: 0.75s ease-out;
   }
@@ -187,64 +205,40 @@ nav svg{
 }
 /*------------Welcome-page---------------*/
 div.welcome-page{
-
+  height: 100vh;
   width: auto;
   display: flex;
   justify-content: center;
   align-items:center;
 }
-.move,h2,h1{
-  margin-left: 10px;
-  display: flex;
-}
+
 h2{
   overflow-y: hidden;
-  font-family:'Franklin Gothic Medium';
+  gap:5px;
+  font-family: alba;
   font-size: 50px;
   color: rgb(255, 255, 255);
 
 }
 .cont{
-
+  font-family: alba;
   border-radius: 5px;
-  margin-top: 10%;
-  margin-bottom: 40%;
+  align-items: center;
   margin-right: auto;
   margin-left: auto;
 
 }
-input#name,button{
-  background-color: #252525;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;;
-  margin: 20px auto;
-  border: none;
-  border-radius: 8px;
-  height: 25px;
-}
 
-.container a{
-  text-decoration: none;
-  color: azure;
-  transition: 1s ease;
-}
-
-.container{
-  background-color: rgba(175, 174, 171, 0.151);
-  width: 250px;
-  height: 250px;
-  margin:auto;
-  border-radius: 20px;
-}
 .h1{
+  gap:10px;
+  font-family: alba;
   padding-top: 20px;
   color: aliceblue;
 }
 .adding{
+  font-family: alba;
   background-color:rgb(41, 40, 40) ;
+  gap:5px;
   height: 80px;
   display: flex;
   align-items: center;
@@ -265,13 +259,13 @@ input#name,button{
   width:100%;
   height: 85px;
   border-radius: 10px;
-  background-image: conic-gradient(from var(--angle), transparent 15% ,white,cyan,white );
+  background-image: conic-gradient(from var(--angle), transparent -10% ,white,cyan,white );
   top:20%;
   left:50%;
   translate:-50% -95%;
   z-index: -1;
   padding: 3px;
-  animation: 2s spin linear infinite;
+  animation: 5s spin linear infinite;
 }
 @keyframes spin {
   from{
@@ -285,55 +279,63 @@ input#name,button{
   filter: blur(1.5rem);
 }
 #name-add{
+  margin-left: 8px;
   color: rgb(255, 255, 255);
 }
 .cont span{
   padding-top: 5px;
-  margin-left: 8px;
+  gap:5px;
   display: inline;
   font-size: 45px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(100, 205, 236);
-}
-.cont h1{
-  margin-left: 10px;
-  display: inline;
-  font-size: 40px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: alba;
   color: rgb(255, 255, 255);
 }
-#go{
-  width: 50px;
-  padding-left: 15px;
-  cursor: pointer;
-}
-#go:hover{
-  color: aqua;
-}
+
+
 /* welcome page end */
 /* work */
+div#Work{
+  margin-top: 10px;
+}
 div.slides{
-  height: 520px;
+  height: 490px;
+  width: 400px;
 }
 .art-works{
-
+  font-family: Para;
+  
   text-align: center;
   text-decoration: none;
   letter-spacing: 4px;
   font-weight: bold;
   font-size: 20px;
-  color: rgb(43, 149, 153);
+  color: rgb(255, 255, 255);
+}
+.tap{
+  padding-top: 5px;
+  background-color: rgba(250, 235, 215, 0.159);
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  width: 300px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  
 
 }
 .art-works h1{
-  padding-top:100px;
+  font-family: heading;
+  padding-top:10px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-bottom: 10px;
     text-align: center;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(236, 58, 58);
+}
+div#Work.art-works.block3{
+  height: 100vh;
 }
 /* -----work end----- */
 /* ------Projects------- */
@@ -358,13 +360,16 @@ div.slides{
   animation-timeline: view();
   animation-range: entry 20% cover 60%;
 }
-.project-container h1{
+div.project-container h1{
+  font-family: heading;
   padding-top: 80px;
   padding-bottom: 20px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
-  color: antiquewhite;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(255, 255, 255);
 
 }
 .project1 img{
@@ -373,6 +378,7 @@ div.slides{
   border-radius: 20px;
 }
 .project1 h2{
+  font-family: Para;
   font-size: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -409,7 +415,7 @@ div.slides{
   backdrop-filter: blur(20px);
 }
 .about h1{
-  font-family: minecraftfont;
+  font-family: heading;
   height: auto;
   padding-top: 10px;
   margin-top: 350px;
@@ -420,6 +426,8 @@ div.slides{
   text-align: center;
 }
 .about p{
+  font-family: Para;
+  line-height:25px;
   font-size: 20px;
   margin: auto;
   width: 400px;
@@ -440,7 +448,7 @@ footer{
   height:80px;
 }
 footer h1{
-  font-family: minecraftfont;
+  font-family: heading;
   font-size: 20px;
   margin: 0px;
   height: 20px;
@@ -467,75 +475,87 @@ footer h1{
   filter: invert(0) sepia(1) saturate(20) hue-rotate(93.6deg) brightness(1.2);
 }
 @media (max-width:500px){
-  body{
-    background-image: url(/assets/Images/spidermansiting.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
+  /* navigation  */
+  nav{
+    background-color: transparent;
+  }
+  nav a:hover{
+    background-color: rgba(0, 0, 0, 0.576);
+    border-radius: 10px;
+    transition:0.3s ease-in-out;
+  }
+  /* home page  */
+  div#Home.welcome-page{
+    height: 550px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items:center;
   }
   .cont{
+    font-family: alba;
     display: inline;
   }
-  div#Home{
-    height: 50vh;
+  .cont h2{
+    font-family: alba;
+    padding-top: 2px;
+    display: flex;
+    font-size: 20px;
+    color: rgb(255, 255, 255)
   }
+  .cont h1{
+    font-family: alba;
+    display: inline;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+  }
+
   .adding{
+    height: 50px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
     width: max-content;
     font-size: small;
   }
+
+  .cont span{
+    font-family: alba;
+    padding-top: 1px;
+    display: inline;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+  }
+
   .border::after, .border::before{
     content: '';
     position: absolute;
     width:100%;
-    height: 85px;
+    height: 50px;
     border-radius: 10px;
-    background-image: conic-gradient(from var(--angle), transparent 15% ,white,rgb(24, 28, 243),rgb(226, 17, 17) );
+    background-image: conic-gradient(from var(--angle), transparent 15% ,white,rgb(24, 181, 243),rgb(255, 255, 255) );
   }
-    .cont h2{
-      padding-top: 2px;
-      margin-left: 5px;
-      display: flex;
-      font-size: 20px;
-      font-family: Arial, Helvetica, sans-serif;
-      color: rgb(240, 77, 77)
+    
+  
+  
+    /* art  */
+    div#Work.art-works.block3{
+      height: 35vh;
     }
-    .cont h1{
-      margin-left: 10px;
-      display: inline;
-      font-size: 20px;
-      font-family: Arial, Helvetica, sans-serif;
-      color: rgb(255, 255, 255);
+    .art-works h1{
+      padding-top: 10px;
     }
     div.slides{
-      height: 420px;
+      height: 390px;
+      width: max-content;
+      background-color: transparent;
     }
-    .adding{
-      background-color:rgb(48, 47, 48) ;
-      height: 80px;
-      display: block;
-      align-items:normal;
-      border-radius: 10px;
-    }
-    .cont span{
-      padding-top: 1px;
-      margin-left: 5px;
-      display: inline;
-      font-size: 20px;
-      font-family: Arial, Helvetica, sans-serif;
+    .tap{
       color: rgb(255, 255, 255);
     }
-    nav{
-      background-color: rgba(173, 99, 99, 0.726);
-    }
-    nav a:hover{
-      background-color: rgb(241, 159, 159);
-      border-radius: 10px;
-      transition:0.3s ease-in-out;
-    }
+    /* project  */
     div#project{
-      margin-top: 50vh;
+      margin-top: 0px;
     }
     div.project1{
       margin: auto;
@@ -544,6 +564,16 @@ footer h1{
       background-color: rgba(231, 133, 133, 0.671);
       backdrop-filter: blur(10px);
     }
+    div.project-list{
+      display: flex;
+      flex-direction: column;
+      
+    }
+    .project1{
+      padding-top: 10px;
+      text-align: center;
+    }
+    /* about  */
     .about{
       display:block;
       text-wrap: wrap;
@@ -556,14 +586,6 @@ footer h1{
       border-radius: 20px;
       backdrop-filter: blur(20px);
 
-    }
-    .art-works h1{
-      padding-top: 10px;
-    }
-    .tap{
-      color: rgb(255, 255, 255);
-
-    
     }
     .about p{
       font-size: 20px;
@@ -585,16 +607,7 @@ footer h1{
       margin-bottom: 500px;
       width:300px;
       height: 200px;
-      background-color: rgba(231, 133, 133, 0.671);
-      backdrop-filter: blur(10px);
+     
     }
-    div.project-list{
-      display: flex;
-      flex-direction: column;
-      
-    }
-    .project1{
-      padding-top: 10px;
-      text-align: center;
-    }
+
 }
