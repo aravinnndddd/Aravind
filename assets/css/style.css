@@ -82,23 +82,28 @@ img.namedlogo{
   width: min-content;
   height: 30px;
 }
-nav{
+
+body nav{
   font-family: navfont;
   width: 80%;
-  position: static;
+  margin-top: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
   background-color: #cecbcbbb;
   backdrop-filter: blur(10px);
-  margin:10px auto;
   border-radius: 10px;
   height: 70px;
-  display: flex;
-  justify-content: center;
+  display:flex;
+  justify-content:space-evenly;
   align-items: center;
+  position:fixed;
   transition:0.5s ease-out;
+  z-index: 8;
 }
 .links-container{
   height: 100%;
   width: 100%;
+  margin: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -305,7 +310,20 @@ h2{
   color: rgb(255, 255, 255);
 }
 
-
+.enter-name{
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  background-image:radial-gradient(rgb(0, 0, 255),rgb(51, 74, 202),rgb(255, 255, 255));
+  border-radius:40%;
+  margin: auto;
+}
+div.enter-name p{
+  color:white;
+  font-family: heading;
+  padding: 20%;
+  text-align: center;
+}
 /* welcome page end */
 /* work */
 div#Work{
