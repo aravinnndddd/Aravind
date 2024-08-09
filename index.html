@@ -31,15 +31,17 @@
 			
     </div>
   </nav>
-
+  <!-- <div class="line"></div> -->
 <!-- Enter your name -->
 <div class="main block2" >
 	<div class="welcome-page" id="Home">
     <div class="cont">
      <div class="adding"><h2>Hey</h2><h2 id="name-add"></h2><h2>I'm <span>Aravind.</span></h2></div>
 		 <div class="border"></div>
-		</div>
+	</div>
   </div>
+  <div class="enter-name" onclick="EnterName()"><p>Enter Your Name</p></div>
+ 
 
 <!----------------Work--------------->
 
@@ -82,7 +84,7 @@
 <!-- ---project--- -->
 
    <div id="project" >
-	
+	<!-- <div class="line2"></div> -->
 		<div class="project-container">
 			<h1>Project Area</h1>
 			<div class="project-list">
@@ -113,10 +115,12 @@
   var pageId = $(this).attr("data-page");
   $("html, body").animate({ scrollTop: $("#"+pageId).offset().top }, 1000);
   });
+  function EnterName(){
 	let userName =prompt("Enter your name to see Magic");
 			if (userName != null) {
 				document.getElementById("name-add").innerHTML = `${userName.charAt(0).toUpperCase()+ userName.slice(1).toLowerCase()}, `;
 }
+  }
 </script>
 </body>
 <!-- Footer -->
